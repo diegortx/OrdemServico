@@ -11,11 +11,12 @@
 
         </form>
       </p>
+      <el-row>
 
       <div class="row">
         
         @foreach ($lista as $key => $value)
-            
+  
           <oscard 
           titulo="{{str_limit($value->titulo,8,"...") }}" 
           descricao="{{str_limit($value->descricao,10,"...") }}" 
@@ -27,6 +28,7 @@
           md="2"  
           >
         </oscard>
+
 
         @endforeach
         

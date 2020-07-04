@@ -57,12 +57,23 @@ class OsController extends Controller
     {
         $data = $request->all();
 
+        if(!empty($request->file('image'))){
+          $imagePath = $request->image->store('os/fotos');
+          $data['image'] = $imagePath;
+        }else{
+          $imagePath = 'Sem Imagen';
+          $data['image'] = $imagePath;
+        }
+
+
         $validacao = \Validator::make($data,[
           "titulo" => "required",
           "descricao" => "required",
           "conteudo" => "required",
           "data_inicio" => "required",
           "data_final" => "required",
+          
+          
           
         ]);
 

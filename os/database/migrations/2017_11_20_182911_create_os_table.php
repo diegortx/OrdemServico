@@ -20,8 +20,8 @@ class CreateOsTable extends Migration
             $table->text('conteudo');
             $table->date('data_inicio');
             $table->date('data_final');
-            $table->integer('user_id')->unsigned();
-           
+            $table->string('image');    
+            $table->integer('user_id')->unsigned();           
             $table->timestamps();
             $table->softDeletes();
         });

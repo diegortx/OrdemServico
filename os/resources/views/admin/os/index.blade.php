@@ -18,23 +18,25 @@
 
 
       <tabela-lista
-      v-bind:titulos="['#','Título','Descrição','Autor','Data Inicio', 'Data Final']"
+      v-bind:titulos="['#','Título','Descrição','Autor','Data Inicio', 'Data Final','Imagens']"
       v-bind:itens="{{json_encode($listaOs)}}"
       ordem="desc" ordemcol="1"
       criar="#criar" detalhe="/admin/os/" editar="/admin/os/" deletar="/admin/os/" token="{{ csrf_token() }}"
       modal="sim"
       user_id="{{ auth()->user()->id }}"
       ></tabela-lista>
+
       <div align="center">
-        {{$listaOs}}
+       {{ ($listaOs) }}
       </div>
+
     </painel>
 
   </pagina>
 
   <modal nome="adicionar" titulo="Adicionar" >
     
-    <formulario id="formAdicionar" css=""  action="{{route('os.store')}}" method="post" enctype="" token="{{ csrf_token() }}">
+    <formulario id="formAdicionar" css=""  action="{{route('os.store')}}" method="post" enctype="multipart/form-data" token="{{ csrf_token() }}">
 
       <div class="form-group">
         <label for="user_id">OS Resposável :  {{ strtoupper(auth()->user()->name) }} </label>
@@ -56,6 +58,11 @@
       </div>
 
       <div class="form-group">
+        <label for="image">Imagem</label>     
+        <input type="file" class="form-control-file" id="image" name="image">
+      </div>
+
+      <div class="form-group">
         <label for="data_inicio">Data Inicial</label>
         <input type="date" class="form-control" id="data_inicio" name="data_inicio" v-model="$store.state.item.data_inicio">
       </div>
@@ -73,8 +80,9 @@
     </span>
 
   </modal>
+
   <modal nome="editar" titulo="Editar">
-    <formulario id="formEditar" v-bind:action="'/admin/os/' + $store.state.item.id" method="put" enctype="" token="{{ csrf_token() }}">
+    <formulario id="formEditar" v-bind:action="'/admin/os/' + $store.state.item.id" method="put" enctype="multipart/form-data" token="{{ csrf_token() }}">
 
       <div class="form-group">
         <label for="titulo">Título</label>
@@ -88,6 +96,7 @@
         <label for="conteudo">Conteúdo</label>
         <textarea class="form-control" id="conteudo" name="conteudo" v-model="$store.state.item.conteudo" ></textarea>
       </div>
+
 
       <div class="form-group">
         <label for="data_inicio">Data Inicial</label>
@@ -107,10 +116,18 @@
 
 
   <div class="center" align="center">
-  <modal nome="detalhe" v-bind:titulo="$store.state.item.titulo">
+{{-- 
+    {{dd(json_encode($listaOs->image))}} --}}
+
+  <modal nome="detalhe" v-bind:titulo="$store.state.item.titulo">    
+
+
       <h4>@{{$store.state.item.descricao}}</h4>
-      <p>@{{$store.state.item.conteudo}}</p>
-      
+      <p>@{{$store.state.item.conteudo}}</p> 
+      <img v-bind:src="'http://127.0.0.1:8000/storage/' + $store.state.item.image" alt="" width="200px">
+
+            
+
     </modal>
   </div>
 

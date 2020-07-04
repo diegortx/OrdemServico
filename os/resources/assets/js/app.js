@@ -9,10 +9,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import Vuex from 'Vuex';
-import ElementUI from 'element-ui';
-import { Message } from 'element-ui';
 
-Vue.use(Vuex,ElementUI,Message);
+
+Vue.use(Vuex);
 
 
 /**
