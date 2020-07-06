@@ -10,7 +10,6 @@ require('./bootstrap');
 window.Vue = require('vue');
 import Vuex from 'Vuex';
 
-
 Vue.use(Vuex);
 
 
@@ -44,6 +43,7 @@ Vue.component('modal', require('./components/modal/Modal.vue'));
 Vue.component('modallink', require('./components/modal/ModalLink.vue'));
 Vue.component('formulario', require('./components/Formulario.vue'));
 Vue.component('oscard', require('./components/OsCard.vue'));
+Vue.component('dashboard', require('./components/Dashboard.vue'));
 
 
 const app = new Vue({

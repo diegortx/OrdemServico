@@ -22,9 +22,9 @@
       </thead>
       <tbody>
         <tr v-for="(item,index) in lista">
-
+            
           <td v-for="i in item">            
-            {{i | formataData }}
+            {{ i | formataData }}
           </td>
 
           <td v-if="detalhe || editar || deletar">
@@ -103,14 +103,19 @@
           if(!valor) return '';
           valor = valor.toString();
 
+
+          if(valor)
+
           if(valor.split('-').length == 3){
             valor = (valor.split('-'));
             return valor[2] + '/' + valor[1]+ '/' + valor[0];
           }
 
           return valor;
-        }
+        },
+
       },
+
 
       computed:{
         lista:function(){

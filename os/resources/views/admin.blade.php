@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
   <pagina tamanho="10">
     <painel titulo="Dashboard">
       <migalhas v-bind:lista="{{$listaMigalhas}}"></migalhas>

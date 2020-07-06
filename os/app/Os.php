@@ -25,7 +25,7 @@ class Os extends Model
         if(!empty($user_id)){
             $listaOs = DB::table('os')
             ->join('users','users.id','=','os.user_id')
-            ->select('os.id','os.titulo','os.descricao','users.name','os.data_inicio','os.data_final','image')
+            ->select('os.id','os.titulo','os.descricao','users.name','os.data_inicio','os.data_final')
             ->where(function ($query) use ($user_id){
                 $query->where('os.user_id','=',$user_id);
             })
@@ -36,7 +36,7 @@ class Os extends Model
         }else{
             $listaOs = DB::table('os')
             ->join('users','users.id','=','os.user_id')
-            ->select('os.id','os.titulo','os.descricao','users.name','os.data_inicio','os.data_final','image')
+            ->select('os.id','os.titulo','os.descricao','users.name','os.data_inicio','os.data_final')
             ->whereNull('deleted_at')
             ->paginate($paginate);
                 
@@ -50,7 +50,7 @@ class Os extends Model
         if($busca) {
             $listaOs = DB::table('os')
             ->join('users','users.id','=','os.user_id')
-            ->select('os.id','os.titulo','os.descricao','users.name','os.data_inicio','os.data_final','image')
+            ->select('os.id','os.titulo','os.descricao','users.name','os.data_inicio','os.data_final')
             ->whereNull('deleted_at')
             ->whereDate('os.data_inicio','<=',date('Y-m-d'))
             ->where(function ($query) use ($busca){
@@ -63,7 +63,7 @@ class Os extends Model
             
             $listaOs = DB::table('os')
             ->join('users','users.id','=','os.user_id')
-            ->select('os.id','os.titulo','os.descricao','users.name','os.data_inicio','os.data_final','image')
+            ->select('os.id','os.titulo','os.descricao','users.name','os.data_inicio','os.data_final')
             ->whereNull('deleted_at')
             ->whereDate('os.data_inicio','<=',date('Y-m-d'))
             ->orderBy('os.data_inicio','DESC')

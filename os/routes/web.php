@@ -47,11 +47,19 @@ Auth::routes();
 
 Route::get('/admin', 'AdminController@index')->name('admin')->middleware('can:eAutor');
 
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard')->middleware('can:eAutor');
+
 Route::middleware(['auth'])->prefix('admin')->namespace('Admin')->group(function(){
 
   Route::resource('os', 'OsController')->middleware('can:eAutor');
   Route::resource('usuarios', 'UsuariosController')->middleware('can:eAdmin');
   Route::resource('autores', 'AutoresController')->middleware('can:eAdmin');
   Route::resource('adm', 'AdminController')->middleware('can:eAdmin');
+
+});
+
+Route::middleware(['auth'])->prefix('dashboard')->namespace('Dashboard')->group(function(){
+
+  Route::resource('dashboard', 'DashboardController')->middleware('can:eAutor');
 
 });

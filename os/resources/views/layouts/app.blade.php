@@ -29,7 +29,12 @@
                 </a>
 
                 <ul class="dropdown-menu" role="menu">
+                    
                     @can('eAutor')
+                    <li>
+                        <a href="{{ route('dashboard') }}">Dashboard </a>
+                    </li>
+
                     <li>
                         <a href="{{ route('admin') }}">Administração</a>
                     </li>
@@ -57,6 +62,8 @@
     <!-- Scripts -->
   <!-- import CSS -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
     <!-- import JavaScript -->
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>

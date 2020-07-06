@@ -1173,7 +1173,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(79);
+module.exports = __webpack_require__(82);
 
 
 /***/ }),
@@ -1226,6 +1226,7 @@ Vue.component('modal', __webpack_require__(65));
 Vue.component('modallink', __webpack_require__(68));
 Vue.component('formulario', __webpack_require__(71));
 Vue.component('oscard', __webpack_require__(74));
+Vue.component('dashboard', __webpack_require__(79));
 
 var app = new Vue({
   el: '#app',
@@ -44077,13 +44078,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       if (!valor) return '';
       valor = valor.toString();
 
-      if (valor.split('-').length == 3) {
+      if (valor) if (valor.split('-').length == 3) {
         valor = valor.split('-');
         return valor[2] + '/' + valor[1] + '/' + valor[0];
       }
 
       return valor;
     }
+
   },
 
   computed: {
@@ -45229,9 +45231,99 @@ if (false) {
 
 /***/ }),
 /* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(80)
+/* template */
+var __vue_template__ = __webpack_require__(81)
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\Dashboard.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Dashboard.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-19e64de8", Component.options)
+  } else {
+    hotAPI.reload("data-v-19e64de8", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 80 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    drawer: null
+});
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "pagina",
+    { attrs: { tamanho: "12" } },
+    [_c("painel", { attrs: { titulo: "Galeria" } }, [_vm._t("default")], 2)],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-19e64de8", module.exports)
+  }
+}
+
+/***/ }),
+/* 82 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: Node Sass does not yet support your current environment: Windows 64-bit with Unsupported runtime (72)\nFor more information on which environments are supported please see:\nhttps://github.com/sass/node-sass/releases/tag/v4.5.3\n    at module.exports (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\node-sass\\lib\\binding.js:13:13)\n    at Object.<anonymous> (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\node-sass\\lib\\index.js:14:35)\n    at Module._compile (internal/modules/cjs/loader.js:1138:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)\n    at Module.load (internal/modules/cjs/loader.js:986:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:879:14)\n    at Module.require (internal/modules/cjs/loader.js:1026:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\sass-loader\\lib\\loader.js:3:14)\n    at Module._compile (internal/modules/cjs/loader.js:1138:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)\n    at Module.load (internal/modules/cjs/loader.js:986:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:879:14)\n    at Module.require (internal/modules/cjs/loader.js:1026:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at loadLoader (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:13:17)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at runLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:362:2)\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\webpack\\lib\\NormalModule.js:195:19\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:11\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:170:18\n    at loadLoader (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:27:11)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at runLoaders (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:362:2)\n    at NormalModule.doBuild (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\webpack\\lib\\NormalModule.js:182:3)\n    at NormalModule.build (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\webpack\\lib\\NormalModule.js:275:15)\n    at Compilation.buildModule (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\webpack\\lib\\Compilation.js:149:10)\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\webpack\\lib\\Compilation.js:447:10\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\webpack\\lib\\NormalModuleFactory.js:241:5\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\webpack\\lib\\NormalModuleFactory.js:94:13\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\tapable\\lib\\Tapable.js:268:11\n    at NormalModuleFactory.<anonymous> (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\webpack\\lib\\CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\tapable\\lib\\Tapable.js:272:13)\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\webpack\\lib\\NormalModuleFactory.js:69:10\n    at D:\\projeto\\Nova pasta\\Vue-Laravel\\os\\node_modules\\webpack\\lib\\NormalModuleFactory.js:194:7\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: Node Sass does not yet support your current environment: Windows 64-bit with Unsupported runtime (72)\nFor more information on which environments are supported please see:\nhttps://github.com/sass/node-sass/releases/tag/v4.5.3\n    at module.exports (D:\\Projetos\\OrdemServico\\os\\node_modules\\node-sass\\lib\\binding.js:13:13)\n    at Object.<anonymous> (D:\\Projetos\\OrdemServico\\os\\node_modules\\node-sass\\lib\\index.js:14:35)\n    at Module._compile (internal/modules/cjs/loader.js:1138:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)\n    at Module.load (internal/modules/cjs/loader.js:986:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:879:14)\n    at Module.require (internal/modules/cjs/loader.js:1026:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (D:\\Projetos\\OrdemServico\\os\\node_modules\\sass-loader\\lib\\loader.js:3:14)\n    at Module._compile (internal/modules/cjs/loader.js:1138:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)\n    at Module.load (internal/modules/cjs/loader.js:986:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:879:14)\n    at Module.require (internal/modules/cjs/loader.js:1026:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at loadLoader (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:13:17)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at runLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:362:2)\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\webpack\\lib\\NormalModule.js:195:19\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:11\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:170:18\n    at loadLoader (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:27:11)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at runLoaders (D:\\Projetos\\OrdemServico\\os\\node_modules\\loader-runner\\lib\\LoaderRunner.js:362:2)\n    at NormalModule.doBuild (D:\\Projetos\\OrdemServico\\os\\node_modules\\webpack\\lib\\NormalModule.js:182:3)\n    at NormalModule.build (D:\\Projetos\\OrdemServico\\os\\node_modules\\webpack\\lib\\NormalModule.js:275:15)\n    at Compilation.buildModule (D:\\Projetos\\OrdemServico\\os\\node_modules\\webpack\\lib\\Compilation.js:149:10)\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\webpack\\lib\\Compilation.js:447:10\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\webpack\\lib\\NormalModuleFactory.js:241:5\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\webpack\\lib\\NormalModuleFactory.js:94:13\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\tapable\\lib\\Tapable.js:268:11\n    at NormalModuleFactory.<anonymous> (D:\\Projetos\\OrdemServico\\os\\node_modules\\webpack\\lib\\CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (D:\\Projetos\\OrdemServico\\os\\node_modules\\tapable\\lib\\Tapable.js:272:13)\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\webpack\\lib\\NormalModuleFactory.js:69:10\n    at D:\\Projetos\\OrdemServico\\os\\node_modules\\webpack\\lib\\NormalModuleFactory.js:194:7\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
 
 /***/ })
 /******/ ]);
